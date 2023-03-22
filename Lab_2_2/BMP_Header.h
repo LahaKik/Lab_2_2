@@ -33,6 +33,7 @@ public:
 		fwrite(&bfReserved1, sizeof(WORD), 1, f);
 		fwrite(&bfReserved2, sizeof(WORD), 1, f);
 		fwrite(&bfOffBits, sizeof(DWORD), 1, f);
+		fwrite(&bfOffBits, sizeof(DWORD), 1, f);//
 
 		fwrite(&bcSize, sizeof(DWORD), 1, f);
 		fwrite(&bcWidth, sizeof(WORD), 1, f);
