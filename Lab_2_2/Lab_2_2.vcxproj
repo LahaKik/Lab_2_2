@@ -132,7 +132,6 @@
   <ItemGroup>
     <ClInclude Include="BMP_Coder.h" />
     <ClInclude Include="BMP_Header.h" />
-    <ClInclude Include="UI_Writer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
