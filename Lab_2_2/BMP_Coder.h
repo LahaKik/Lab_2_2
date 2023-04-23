@@ -52,8 +52,8 @@ public :
 			throw "Sorry, can't create file";
 
 		unsigned long height, width, DataForName = SourceFileName.length() + 2 * sizeof(LONG) + SourceFileExtension.length();
-		width = (long)ceil(sqrt(ceil((Size / 3.0) + DataForName))) + (4 - (long)ceil(sqrt(ceil(Size / 3.0) + DataForName)) % 4) % 4;
-		height = (long)ceil(Size / (width*3.0));
+		width = (unsigned long)ceil(sqrt(ceil((Size / 3.0) + DataForName))) + (4 - (unsigned long)ceil(sqrt(ceil(Size / 3.0) + DataForName)) % 4) % 4;
+		height = (unsigned long)ceil(Size / (width*3.0));
 
 		unsigned char Zero = 0;
 
@@ -66,9 +66,9 @@ public :
 		header.WriteHeaderV3(newF);
 		WriteNameAndExtension(newF);
 
-		for (int i = 0; i < height; i++)
+		for (unsigned long i = 0; i < height; i++)
 		{
-			for (int j = 1; j <= width*3; j++)
+			for (unsigned long j = 1; j <= width*3; j++)
 			{
 				if (i * width*3 + j <= Size)
 				{
